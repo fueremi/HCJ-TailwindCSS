@@ -14,6 +14,55 @@ Adam Wathan
 
 1 November 2017
 
+## Why ?
+
+_Best practices_ don't actually work. CSS Utility Classes and "Separation of Concerns".
+
+### Separation of concerns
+
+- Structure
+- Presentation
+- Behaviour
+
+### Phase of build Tailwinds
+
+- Phase 1 : Semantic CSS
+
+  Markup yang saya buat tidak sesuai dengan stylingnya, tapi CSS saya sangat tergantung dengan markup style saya. Mungkin perhatian yang harus dipisahkan ternyata tidak bisa dipisahkan.
+
+- Phase 2 : _Decoupling_ styles from structure
+
+  BEM: Blocks, Elements, Modifier
+
+  - Blocks : Element2 yang secara entitas berdiri sendiri dan memiliki makna sendiri
+  - Element : Bagian dari block yang ga punya arti sendiri dan secara semantic terikat dengan block
+  - Modifier : Untuk memodifikasi element
+
+  Kemudian saya dihadapi dilemma. Ada components yang secara visual sama, tetapi semanticnya tidak sesuai. Sehingga harus dibuat ulang tapi jadi ga bagus (duplikasi).
+
+  Solusinya membuat komponen yang tidak bergantung pada konten. Akan tetapi kehilangan kemampuan separation of concerns. Adam mengatakan, ada 2 cara menulis HTML & CSS:
+
+  - Separation of Concerns (CSS bergantung HTML)
+    - HTML restyleable, CSS not reusable
+  - Mixing of Concerns (HTML bergantung CSS)
+    - HMTL not restyleable, CSS reusable
+
+  Adam memilih **reusablilty**
+
+- Phase 3: Komponen CSS yang tidak bergantung pada konten
+
+  Semakin banyak yang dilakukan komponen atau semakin spesifik fungsi dari komponen, semakin susah reusablility.
+
+- Phase 4: Content-agnostic CSS components + utility classes
+
+  Semakin banyak komponen akan tetap semakin susah untuk reusability.
+
+- Phase 5: Utility-first Class
+
+  Karena sudah tidak menganut Seperation of Concerns jadi tidak pengaruh.
+
+  Adam: **"You should still create components but built them using utility first"** nama kemampuannya (@apply)
+
 ## Utility-First vs Component-First
 
 ### Component-first
