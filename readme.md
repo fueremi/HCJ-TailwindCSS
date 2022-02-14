@@ -111,23 +111,15 @@ Keliatannya memang seperti inline CSS, interactivity tidak bisa di inline css (l
 
 ## Utilities
 
-### Preflight
-
-### Layout
-
-### Flexbox & Grid
-
-### Spacing & Sizing
-
-### Typography
-
-### Background & Borders
-
-### Effect & Filters
-
-### Transition, Transformation & Animation
-
-### Tables
+- Preflight
+- Layout
+- Flexbox & Grid
+- Spacing & Sizing
+- Typography
+- Background & Borders
+- Effect & Filters
+- Transition, Transformation & Animation
+- Tables
 
 ## Features
 
@@ -164,3 +156,45 @@ Keliatannya memang seperti inline CSS, interactivity tidak bisa di inline css (l
 - Code Editor: Visual Studio Code
 - VSCode Extension: Tailwind CSS IntelliSense
 - Package Manager: NPM
+
+## Installation
+
+1. Install taildwindcss, postcss, autoprefixer
+
+   ```bash
+    npm i -D tailwindcss postcss autoprefixer
+   ```
+
+2. Configure file that need to watch by tailwind
+
+   ```js
+   module.exports = {
+     content: ["./public/**/*.{html,js}"],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
+
+3. Create css file that contain tailwind directive
+
+   ```css
+   @tailwind base; /* Reset CSS */
+   @tailwind components; /* Membuat container dan grid system */
+   @tailwind utilities; /* Memanggil utility-class */
+   ```
+
+4. Run command to start taildwind
+
+   ```bash
+    npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+   ```
+
+5. To minified the **FINAL** css file.
+
+   ```bash
+   npx tailwindcss -o ./public/css/final.css --minify
+   ```
+
+   _Don't forget to change css file on index.html_
