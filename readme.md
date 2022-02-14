@@ -204,3 +204,61 @@ Keliatannya memang seperti inline CSS, interactivity tidak bisa di inline css (l
    ```
 
    _Don't forget to change css file on index.html_
+
+## Usage using CDN
+
+[-] ~~Intellisense tidak berjalan jika menggunakan CDN~~ Intellisense bisa digunakan dengan membuat file tailwind.config.js
+
+## Utilities Class Need To Look Up
+
+### Custom values
+
+Kamu dapat menambahkan class baru\* sendiri (Jika value sering digunakan)
+
+```js
+tailwind.config = {
+  theme: {
+    extend: {
+      spacing: {
+        19: "4.75rem",
+      },
+      fontFamily: {
+        inter: ["Inter"],
+      },
+      colors: {
+        fueremi: "#bada55",
+      },
+    },
+  },
+};
+```
+
+### Arbitrary values
+
+Kamu dapat memasukkan nilai pada suatu theme. (Jika value hanya sesekali digunakan)
+
+```html
+<div class="bg-[url('location-image/image.png')]"></div>
+
+<div class="m-[13px]"></div>
+```
+
+### Gradient
+
+Kamu bisa membuat gradient untuk element maupun text dengan sangat mudah
+
+```html
+<div class="bg-gradient-r from-slate-500 to-emerald-300"></div>
+
+<h1
+  class="bg-gradient-tr from-indigo-200 to-teal-400 bg-clip-text text-transparent"
+>
+  Tailwind CSS
+</h1>
+```
+
+### Backdrop Blur
+
+Kamu bisa membuat glassmorphism css
+
+_Don't forget to transparent the text_
