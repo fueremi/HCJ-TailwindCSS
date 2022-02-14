@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              19: "4.75rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+            colors: {
+              fueremi: "#bada55",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Utility</title>
+  </head>
+  <body class="font-inter">
+    <h1 class="text-5xl font-bold p-4 mb-4 text-center">
+      Utility |
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+        >Tailwind CSS</span
+      >
+    </h1>
+    <section
+      class="mb-4 font-inter max-w-xl mx-auto bg-gradient-to-tr from-indigo-400 via-red-300 to-teal-400 p-4 rounded-md shadow-2xl"
+    >
+      <h2 class="text-4xl font-bold">Typography</h2>
+      <div class="mb-4">By Fueremi, 14 February 2022</div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet
+        <a href="" class="font-semibold underline">consectetur</a> adipisicing
+        elit. Eum ea numquam similique quisquam consequatur dicta facere.
+        Perspiciatis aliquid odio quaerat rerum beatae eos quia. Similique quia
+        soluta quibusdam harum possimus distinctio ex reprehenderit cupiditate a
+        blanditiis libero placeat aspernatur ullam optio enim maiores suscipit
+        architecto inventore necessitatibus, delectus maxime dolorum.
+      </p>
+      <blockquote class="mb-4 italic font-thin text-lg">
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        debitis. Velit ullam fuga tenetur exercitationem illum rerum repellendus
+        eligendi aliquid."
+      </blockquote>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vel
+        veniam voluptate! Modi fuga cupiditate inventore doloribus eveniet?
+        Reprehenderit, ipsam! Maiores illum repudiandae rerum debitis doloribus,
+        recusandae ea sunt voluptate?
+      </p>
+    </section>
+
+    <div
+      class="overflow-y-scroll bg-fixed max-w-xl mb-20 h-96 bg-[url('https://source.unsplash.com/1000x600?computer')] mx-auto"
+    >
+      <p class="p-5 text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, est
+        dolore at molestias enim error alias reprehenderit omnis, eligendi
+        commodi vitae blanditiis, ducimus ab a nostrum molestiae sapiente. Quasi
+        alias atque impedit ullam laboriosam aliquam velit laudantium
+        repudiandae unde id recusandae magnam magni, sed enim? Necessitatibus
+        nobis sed corrupti enim libero architecto laboriosam, dicta
+        exercitationem! Quae dolore perferendis tempora ea perspiciatis laborum,
+        natus delectus nobis itaque libero rerum ut sit laudantium iste est illo
+        ab nulla dignissimos deserunt similique quibusdam. Veniam quo molestias
+        expedita modi recusandae, adipisci, exercitationem mollitia sit
+        reprehenderit repudiandae ut? Explicabo iure cum sequi placeat quibusdam
+        voluptatibus atque maiores reprehenderit aperiam tempore ab odit
+        provident consequuntur, ex suscipit minus impedit quas, aliquid labore
+        repellendus optio minima repudiandae eos. Molestias ut excepturi
+        asperiores reiciendis earum? Sapiente voluptatem fuga dolores in
+        deleniti libero saepe voluptatum pariatur dolore! Ex saepe voluptatum
+        corporis nulla nisi magnam laborum, mollitia nihil maxime autem maiores
+        aliquid vel! Perspiciatis aliquam omnis iste. Facere culpa sequi eius
+        similique asperiores sapiente eum possimus nobis illo perspiciatis earum
+        nisi magnam a voluptatem optio eaque animi exercitationem obcaecati sit,
+        consectetur provident. Quia, esse autem ea commodi consequatur
+        exercitationem harum earum non, pariatur sit eius distinctio veniam
+        porro, vitae nihil?
+      </p>
+    </div>
+
+    <div
+      class="flex my-32 max-w-xl overflow-hidden border-8 mx-auto h-96 bg-[url('https://source.unsplash.com/1000x600?laptop')] bg-cover rounded-2xl shadow-xl shadow-slate-500"
+    >
+      <div
+        class="w-[200px] h-[200px] bg-white/50 m-auto backdrop-blur-md rounded-full"
+      ></div>
+    </div>
+  </body>
+</html>
