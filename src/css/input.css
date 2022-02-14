@@ -1,3 +1,0 @@
-@tailwind base; /* Reset CSS */
-@tailwind components; /* Membuat container dan grid system */
-@tailwind utilities; /* Memanggil utility-class */
