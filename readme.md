@@ -165,7 +165,13 @@ Keliatannya memang seperti inline CSS, interactivity tidak bisa di inline css (l
     npm i -D tailwindcss postcss autoprefixer
    ```
 
-2. Configure file that need to watch by tailwind
+1. Instansiasi taildwind
+
+   ```bash
+    npx tailwindcss init
+   ```
+
+1. Configure file that need to watch by tailwind
 
    ```js
    module.exports = {
@@ -177,7 +183,7 @@ Keliatannya memang seperti inline CSS, interactivity tidak bisa di inline css (l
    };
    ```
 
-3. Create css file that contain tailwind directive
+1. Create css file that contain tailwind directive
 
    ```css
    @tailwind base; /* Reset CSS */
@@ -185,13 +191,13 @@ Keliatannya memang seperti inline CSS, interactivity tidak bisa di inline css (l
    @tailwind utilities; /* Memanggil utility-class */
    ```
 
-4. Run command to start taildwind
+1. Run command to start taildwind
 
    ```bash
     npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
    ```
 
-5. To minified the **FINAL** css file.
+1. To minified the **FINAL** css file.
 
    ```bash
    npx tailwindcss -o ./public/css/final.css --minify
