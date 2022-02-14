@@ -257,8 +257,8 @@ Kamu bisa membuat gradient untuk element maupun text dengan sangat mudah
 </h1>
 ```
 
+_Don't forget to transparent the text_
+
 ### Backdrop Blur
 
 Kamu bisa membuat glassmorphism css
-
-_Don't forget to transparent the text_
