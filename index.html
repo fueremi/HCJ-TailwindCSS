@@ -15,181 +15,60 @@
       tailwind.config = {
         darkMode: "class",
         theme: {
-          extend: {
-            spacing: {
-              19: "4.75rem",
-            },
-            fontFamily: {
-              inter: ["Inter"],
-            },
-            colors: {
-              fueremi: "#bada55",
-            },
-            animation: {
-              "spin-slow": "spin 4s linear infinite",
-              wiggle: "wiggle 1s ease-in-out infinite",
-            },
-            keyframes: {
-              wiggle: {
-                "0%, 100%": { transform: "rotate(-3deg)" },
-                "50%": { transform: "rotate(3deg)" },
-              },
-            },
-          },
+          extend: {},
         },
       };
     </script>
-    <style type="text/tailwindcss">
-      #toggle:checked ~ label div.circle {
-        @apply translate-x-3;
-      }
-    </style>
     <title>Utility</title>
   </head>
   <body class="font-inter dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-5xl font-bold p-4 mb-4 text-center">
-      Utility |
+      Layouting |
       <span
         class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
         >Tailwind CSS</span
       >
     </h1>
-    <section
-      class="mb-4 font-inter max-w-xl mx-auto bg-gradient-to-tr from-indigo-400 via-red-300 to-teal-400 p-4 rounded-md shadow-2xl"
-    >
-      <h2 class="text-4xl font-bold">Typography</h2>
-      <div class="mb-4">By Fueremi, 14 February 2022</div>
-      <p class="mb-4">
-        Lorem ipsum dolor sit amet
-        <a href="" class="font-semibold underline">consectetur</a> adipisicing
-        elit. Eum ea numquam similique quisquam consequatur dicta facere.
-        Perspiciatis aliquid odio quaerat rerum beatae eos quia. Similique quia
-        soluta quibusdam harum possimus distinctio ex reprehenderit cupiditate a
-        blanditiis libero placeat aspernatur ullam optio enim maiores suscipit
-        architecto inventore necessitatibus, delectus maxime dolorum.
-      </p>
-      <blockquote class="mb-4 italic font-thin text-lg">
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-        debitis. Velit ullam fuga tenetur exercitationem illum rerum repellendus
-        eligendi aliquid."
-      </blockquote>
-      <p class="mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vel
-        veniam voluptate! Modi fuga cupiditate inventore doloribus eveniet?
-        Reprehenderit, ipsam! Maiores illum repudiandae rerum debitis doloribus,
-        recusandae ea sunt voluptate?
-      </p>
-    </section>
 
-    <div
-      class="overflow-y-scroll bg-fixed max-w-xl mb-20 h-96 bg-[url('https://source.unsplash.com/1000x600?computer')] mx-auto"
-    >
-      <p class="p-5 text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, est
-        dolore at molestias enim error alias reprehenderit omnis, eligendi
-        commodi vitae blanditiis, ducimus ab a nostrum molestiae sapiente. Quasi
-        alias atque impedit ullam laboriosam aliquam velit laudantium
-        repudiandae unde id recusandae magnam magni, sed enim? Necessitatibus
-        nobis sed corrupti enim libero architecto laboriosam, dicta
-        exercitationem! Quae dolore perferendis tempora ea perspiciatis laborum,
-        natus delectus nobis itaque libero rerum ut sit laudantium iste est illo
-        ab nulla dignissimos deserunt similique quibusdam. Veniam quo molestias
-        expedita modi recusandae, adipisci, exercitationem mollitia sit
-        reprehenderit repudiandae ut? Explicabo iure cum sequi placeat quibusdam
-        voluptatibus atque maiores reprehenderit aperiam tempore ab odit
-        provident consequuntur, ex suscipit minus impedit quas, aliquid labore
-        repellendus optio minima repudiandae eos. Molestias ut excepturi
-        asperiores reiciendis earum? Sapiente voluptatem fuga dolores in
-        deleniti libero saepe voluptatum pariatur dolore! Ex saepe voluptatum
-        corporis nulla nisi magnam laborum, mollitia nihil maxime autem maiores
-        aliquid vel! Perspiciatis aliquam omnis iste. Facere culpa sequi eius
-        similique asperiores sapiente eum possimus nobis illo perspiciatis earum
-        nisi magnam a voluptatem optio eaque animi exercitationem obcaecati sit,
-        consectetur provident. Quia, esse autem ea commodi consequatur
-        exercitationem harum earum non, pariatur sit eius distinctio veniam
-        porro, vitae nihil?
-      </p>
-    </div>
-
-    <div
-      class="flex my-32 max-w-xl overflow-hidden border-8 mx-auto h-96 bg-[url('https://source.unsplash.com/1000x600?laptop')] bg-cover rounded-2xl shadow-xl shadow-slate-500"
-    >
-      <div
-        class="w-[200px] h-[200px] bg-white/50 m-auto backdrop-blur-md rounded-full"
-      ></div>
-    </div>
-
-    <div class="flex justify-center">
-      <span class="text-slate-500 mr-2">Light</span>
-      <input type="checkbox" name="" id="toggle" class="hidden" />
-      <label for="toggle">
+    <div class="container mx-auto">
+      <div class="border rounded-lg shadow-lg p-10 relative">
         <div
-          class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+          class="w-10 h-10 bg-sky-100 rounded-full flex fixed bottom-5 right-5 -translate-x-1/2 cursor-pointer"
         >
-          <div class="w-4 h-4 bg-white rounded-full circle"></div>
+          <a href="#" class="m-auto">⬆️</a>
         </div>
-      </label>
-      <span class="text-slate-500 ml-2">Dark</span>
+        <div
+          class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-5 -right-10 -translate-x-1/2 cursor-pointer"
+        >
+          <span class="m-auto">❌</span>
+        </div>
+        <img
+          src="./images.jpg"
+          alt="laptop"
+          width="150"
+          class="float-left mr-4 rounded"
+        />
+        <p class="text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quia
+          doloremque perferendis suscipit quis quae aliquid et porro tempora
+          voluptates ad tempore rerum aspernatur cumque illo quas, ex facilis
+          officia libero eius deleniti ullam expedita facere? Temporibus veniam
+          voluptatem porro non alias tempora fugit nisi ratione, eius, iure,
+          eaque aliquam?
+        </p>
+      </div>
     </div>
 
-    <button
-      class="my-10 bg-sky-500 rounded-full font-semibold font-inter px-5 py-2 text-white block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+    <div
+      class="container border rounded-lg shadow-lg p-10 mx-auto mt-20 columns-3"
     >
-      Simpan
-    </button>
-
-    <div
-      class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group"
-    >
-      <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">
-        My Card
-      </h5>
-      <p
-        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3"
-      >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam repellat
-        corrupti sed eos neque, aut omnis reiciendis quos nisi quaerat possimus
-        eaque sequi numquam sapiente deserunt corporis assumenda culpa officia.
-      </p>
+      <img src="https://source.unsplash.com/600x400" class="mb-4" alt="Image" />
+      <img src="https://source.unsplash.com/600x400" class="mb-4" alt="Image" />
+      <img src="https://source.unsplash.com/600x400" class="mb-4" alt="Image" />
+      <img src="https://source.unsplash.com/600x400" class="mb-4" alt="Image" />
+      <img src="https://source.unsplash.com/600x400" class="mb-4" alt="Image" />
+      <img src="https://source.unsplash.com/600x400" class="mb-4" alt="Image" />
     </div>
-
-    <div
-      class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md p-5 font-inter mb-10"
-    >
-      <form action="">
-        <label for="email">
-          <span
-            class="block mb-1 font-semibold text-slate-700 text-sm after:content-['*'] after:text-pink-500 after:ml-0.5"
-            >Email</span
-          >
-          <input
-            id="email"
-            class="px-3 py-2 w-full block border shadow rounded text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
-            type="email"
-            placeholder="Masukkan email"
-          />
-          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">
-            Email tidak valid
-          </p>
-        </label>
-      </form>
-    </div>
-
-    <hr />
-
-    <div
-      class="w-40 h-40 bg-sky-400 mx-auto rounded-lg shadow-lg my-20 flex items-center justify-center text-white hover:scale-125 hover:rotate-45 hover:bg-pink-700 transition origin-top-left"
-    ></div>
-
-    <div class="w-40 h-40 mx-auto my-20 group">
-      <div
-        class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-1000"
-      ></div>
-    </div>
-
-    <div
-      class="w-40 h-40 bg-pink-400 mx-auto shadow-lg my-20 flex items-center justify-center text-white animate-wiggle rounded-lg"
-    ></div>
 
     <script>
       const checkbox = document.querySelector("#toggle");
